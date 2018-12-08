@@ -8,42 +8,60 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5em;
+    animation: fadeIn 1s linear;
 
-    .item-name {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding-bottom: 5px;
-    }
-
-    .price {
-        font-size: 16px;
-    }
-
-    .description {
-        letter-spacing: 1px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .delete {
-        padding: 5px 10px;
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        border-radius: 5px;
+    .item {
         cursor: pointer;
-        border: none;
-        outline: none;
-        margin-top: 10px;
-        &:hover {
-            background-color: rgba(0,0,0,0.6);
-            
+        .item-name {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 5px;
+        }
+    
+        .price {
+            font-size: 16px;
+        }
+    
+        .description {
+            letter-spacing: 1px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+    
+        .delete {
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            margin-top: 10px;
+            &:hover {
+                background-color: rgba(0,0,0,0.6);
+                
+            }
+        }
+        &:hover > .item-name {
+            text-decoration: underline;
         }
     }
+
+   
 }
 
 @media (max-width: 425px) {
     .menu {
         grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
     }
 }

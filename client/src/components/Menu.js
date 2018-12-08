@@ -51,7 +51,7 @@ class Menu extends Component {
                     {add ? <ItemForm id={id} add={this.addItem} showForm={showForm}/>: null}
                     
                     {items.map(item => 
-                        <div key={item.id}>
+                        <div key={item.id} className="item">
                             <h2 className="item-name">{item.name}</h2>
                             <p className="price">${item.price.toFixed(2)}</p>
                             <p className="description">{item.description}</p>
